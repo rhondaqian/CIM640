@@ -16,3 +16,5 @@
 ### [zeven's site](http://www.zevenrodriguez.com)
 
 [link to week1 assignments](https://github.com/rhondaqian/CIM640/tree/master/Week1)
+
+![Penguin image](http://www.mikereyfman.com/photo/photo.php?Gallery=King-Penguin-Chicks-In-Creche-South-Georgia-Sub-Antarctic&ImageNumber=SG2-MR0107)
