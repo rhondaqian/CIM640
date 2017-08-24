@@ -10,3 +10,7 @@
 
 
 ###### How small it can be
+
+[click here for google](http://www.google.com)
+
+### [zeven's site]
