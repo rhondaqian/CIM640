@@ -18,3 +18,4 @@
 [link to week1 assignments](https://github.com/rhondaqian/CIM640/tree/master/Week1)
 
 ![Penguin image](http://www.mikereyfman.com/Photography-Wildlife-Animals/King-Penguin-Chicks-In-Creche-South-Georgia-Sub-Antarctic/big/MR0104.jpg)
+
