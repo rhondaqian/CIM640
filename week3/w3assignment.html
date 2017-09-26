@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Assignment</title>
+
+    <style >
+html, body {
+	background: #3C5E66;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #6C7437;
+
+}
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 100%;
+	width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 2.5% 2.5% 2.5%;
+	background: #BDD1C3;
+	line-height: 1.8;
+}
+    </style>
+
+ </head>
+
+
+<body>
+
+    <h1>Week3 Homework</h1>
+
+    <h3>Calculate the area of a right triangle</h3>
+<form>
+  <label for="leg1">leg1:</label>
+    <input type="text" name="leg1" id="leg1">
+    <label for="leg2">leg2:</label>
+    <input type="text" name="leg2" id="leg2">
+    
+    <button type="button" id="aButton" onclick="calculateArea()"> click here to calculate the area</button> 
+    <br>
+     <div id="output"></div>
+    </form>
+   
+   
+
+    
+    <script>
+
+       
+        function calculateArea(){
+            var Leg1 = document.getElementById("leg1").value;
+            var Leg2 = document.getElementById("leg2").value;
+        
+            console.log(Leg1,Leg2);
+            Area = Leg1*Leg2/2;
+            var message = "The area is  " + Area +".";
+            console.log(message);
+     
+            var outputText = document.getElementById("output");
+            console.log(outputText);
+            outputText.innerHTML = message;
+        
+        }
+     var getButton = document.getElementById("aButton");
+        getButton.addEventListener("click", calculateArea);
+
+        
+   
+    </script>
+    
+</body>
+
+</html>
