@@ -12,7 +12,8 @@ function setup(){
 }
 
 function draw(){
-   noStroke();
+  //the face
+    noStroke();
     stroke(0);
    
     fill("black");
@@ -37,6 +38,7 @@ fill("black");
     rect(posX-2, posY+15 ,4,12);
 
     quad(posX-8, posY+12, posX, posY+6, posX+8, posY+12, posX, posY+18);
+    //the face
 
    
 }
