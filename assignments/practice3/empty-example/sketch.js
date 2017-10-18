@@ -1,20 +1,24 @@
 var posX = 0;
 var posY = 0;
+var bgColor;
+
 
 function setup(){
     createCanvas(500,500);
-      background("grey");
-  
+      bgColor = color("grey");
+ 
     
     posX =250;
     posY = 250;
     
 }
 
+
 function draw(){
   //the face
+    background(bgColor);
     noStroke();
-    stroke(0);
+    
    
     fill("black");
 

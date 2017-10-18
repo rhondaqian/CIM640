@@ -10,6 +10,7 @@ var CurrentBgImage;
 
 
 
+
 function preload(){
 bgImage=loadImage("assets/bg1.jpg");
 bgImage2=loadImage("assets/bg2.jpg");
@@ -19,7 +20,7 @@ bgImage2=loadImage("assets/bg2.jpg");
 
 function setup(){
     createCanvas(500,500);
-       bgColor=color("white");
+       bgColor=color("grey");
        bgChange= createButton("evening") ;
     bgChange.position(400,550);
     bgChange.mousePressed(changeBgFunction);
@@ -43,7 +44,7 @@ function setup(){
 
     
 function draw(){
-background(bgColor);
+
     image(currentBgImage,250,280,550,550);
     
     fill("white");
@@ -67,7 +68,7 @@ background(bgColor);
         image(pics[2], targetPosX[2], targetPosY[2],140,70);
 
     } else {
-        rect(targetPosX[2], targetPosY[2], 140, 120);
+        rect(targetPosX[2], targetPosY[2], 150, 120);
     }
    
     if (mouseX > targetPosX[3] -60 && mouseX < targetPosX[3] + 60 && mouseY > targetPosY[3] - 60 && mouseY < targetPosY[3] + 60) {
@@ -82,11 +83,10 @@ background(bgColor);
     posY=mouseY;
   
     noStroke();
-    stroke(0);
     rectMode(CENTER);
     imageMode(CENTER);
    
-    fill("black");
+    fill(bgColor);
 ellipse(posX,posY,120,95);
   var wiggleX =map(mouseX,0,width,-10,10);
     var wiggleY =map(0,mouseY,height,5,-5);
@@ -97,7 +97,7 @@ ellipse(posX,posY,120,95);
 arc(posX-25, posY-5,40,40,PI+HALF_PI, PI, CHORD);
     arc(posX, posY+5, 50, 50, 45, 40, HALF_PI);
 
-fill("black");
+fill(bgColor);
         arc(posX+60, posY-45, 80, 80, HALF_PI, PI);
     arc(posX-60, posY-45, 80,80, 0,HALF_PI);
   
@@ -127,4 +127,7 @@ function changeBgFunction(){
 }
 function changeBgFunction2(){
     currentBgImage=bgImage;
+}
+function mousePressed(){
+    bgColor= color("black");
 }
