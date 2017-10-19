@@ -45,7 +45,9 @@ function setup(){
     
 function draw(){
 
-    image(currentBgImage,250,280,550,550);
+
+image(currentBgImage,250,280,550,550);
+    
     
     fill("white");
     noStroke();
@@ -89,7 +91,7 @@ function draw(){
     fill(bgColor);
 ellipse(posX,posY,120,95);
   var wiggleX =map(mouseX,0,width,-10,10);
-    var wiggleY =map(0,mouseY,height,5,-5);
+    var wiggleY =map(mouseY,0,height,20,-20);
     
  
      fill("white");
@@ -101,13 +103,8 @@ fill(bgColor);
         arc(posX+60, posY-45, 80, 80, HALF_PI, PI);
     arc(posX-60, posY-45, 80,80, 0,HALF_PI);
   
-    if(mouseY < 250){ ellipse(posX +20+wiggleX, posY-wiggleY -5, 5,30);
+     ellipse(posX +20+wiggleX, posY-wiggleY -5, 5,30);
     ellipse(posX+wiggleX -20, posY-wiggleY -5, 5,30);
-        }
-    else{
-    ellipse(posX +20+wiggleX, posY -5, 5,30);
-    ellipse(posX+wiggleX -20, posY -5, 5,30);
-    }
    
     fill("white");
     noStroke();
