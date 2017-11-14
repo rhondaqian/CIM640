@@ -7,12 +7,6 @@
 ### 3. Combine p5.sound and p5.particle to draw an active volcano. Use keyboard to change the flow and sound of the volcano.
 
 
-[click here for google](http://www.google.com)
 
-### [zeven's site](http://www.zevenrodriguez.com)
+![idea image](https://github.com/rhondaqian/CIM640/blob/master/Final/idea1.jpg)
 
-[link to week1 assignments](https://github.com/rhondaqian/CIM640/tree/master/Week1)
-
-![Penguin image](http://www.mikereyfman.com/Photography-Wildlife-Animals/King-Penguin-Chicks-In-Creche-South-Georgia-Sub-Antarctic/big/MR0104.jpg)
-
-![Polar bear](https://github.com/rhondaqian/hello-world/blob/master/05.gif?raw=true)
