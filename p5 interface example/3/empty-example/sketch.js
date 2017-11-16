@@ -2,7 +2,8 @@ var interfaceItems=[];
 var brushSize=10;
 var value=215;
 var value2=255;
-
+var bubbleX = 150;
+var bubbleY =300;
 
 function setup() {
     createCanvas(400, 400);
@@ -21,9 +22,9 @@ function setup() {
          interfaceItems[1].check();
             interfaceItems[1].display();
       fill(value2);
-    ellipse(150,300,100,50);
-         }
-
+ellipse(bubbleX,bubbleY,100,50);
+  
+ }
 
         function mousePressed(){
           if(interfaceItems[0].check()==true){
@@ -31,10 +32,14 @@ function setup() {
              brushSize++;
               value= 165;
               value2=255;
+               bubbleX++;
+              bubbleY++;
           }
             if(interfaceItems[1].check()==true){brushSize--;
                                                value=215;
-                                               value2=0;}
+                                               value2=0;
+                                               bubbleX--;
+                                               bubbleY--;}
              
     
         }

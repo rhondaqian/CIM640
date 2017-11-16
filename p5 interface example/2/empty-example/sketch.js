@@ -10,11 +10,7 @@ function draw(){
   background(255);
   display();
   move();
-  console.log(checkPos());
 
-  if(checkPos() == true){
-    bubbleX = 0;
-  }
 }
 
 function display(){
