@@ -1,30 +1,20 @@
-var bubbleX = 200;
-var bubbleY = 200;
-var bubbleSize = 50;
+var linePoints = [0, 0, 400, 0];
 
-function setup(){
-  createCanvas(400,400);
+
+function setup() {
+    createCanvas(400, 400);
 }
 
-function draw(){
-  background(255);
-  display();
-  move();
 
-}
+function draw() {
+    frameRate(1);
+    for (var i = 0; i < height; i++) {
+        stroke(random(255), random(255), random(255));
+        line(linePoints[0], linePoints[1], linePoints[2], linePoints[3]);
+        linePoints[1]++;
+        linePoints[3]++;
+    }
 
-function display(){
-  ellipse(bubbleX,bubbleY,bubbleSize,bubbleSize);
-}
+    linePoints = [0, 0, 400, 0];
 
-function move(){
-  bubbleX++;
-}
-
-function checkPos(){
-  if(bubbleX > width){
-    return true;
-  }else{
-    return false;
-  }
 }

@@ -1,64 +1,105 @@
-var interfaceItems = [];
-
-var brushSize = 10;
-
-function setup(){
-  createCanvas(400,400);
-
-  interfaceItems.push(new interface(100,100,50, color(255,0,0)));
-
-  interfaceItems.push(new interface(200,100,50, color(0,255,0)));
-}
+var weather;
+var face;
+var input;
+var units = '&units=metric';
+var rain = [];
+//var emoji = new Emoji(100, 300);
+var prevMillis = 0;
+var interval = 1;
 
 
-function draw(){
-  fill(0);
-  ellipse(mouseX,mouseY, brushSize,brushSize);
+//function preload() {
+//  face = loadImage("a.png");
+//}
 
-  interfaceItems[0].check();
-  interfaceItems[0].display();
-  interfaceItems[1].check();
-  interfaceItems[1].display();
-  //console.log(interfaceItems[0].check());
-}
 
-function mousePressed(){
-  if(interfaceItems[0].check() == true){
-    console.log("pressed red button");
-    brushSize++;
-  }
+function setup() {
+  createCanvas(500, 450);
 
-  if(interfaceItems[1].check() == true){
-    brushSize--;
+  for (i = 0; i < 1000; i++) {
+    rain[i] = new Rain(random(10, 750), random(10, -20000));
   }
 }
 
 
-function interface(tempX, tempY, tempBoxSize, tempColor){
-  this.x  = tempX;
-  this.y = tempY;
-  this.boxSize = tempBoxSize;
-  this.setFill = tempColor;
-  this.overlay = false;
 
-  this.display = function(){
-    fill(this.setFill);
-    rect(this.x, this.y, this.boxSize, this.boxSize);
+function draw() {
+  
+    background(90, 150, 190);
+    //noStroke();
+    //fill(255);
+    ellipse(mouseX, 300, humid, humid);
+     image(face, mouseX, 280, humid, humid);
 
-    if(this.overlay == true){
-      fill(127,200);
-      rect(this.x, this.y, this.boxSize, this.boxSize);
+    emoji.x = mouseX;
+    emoji.draw();
+
+
+if(millis() - prevMillis >= interval){
+    for (i = 0; i < 200; i++) {
+      rain[i].drawRain();
+      rain[i].ripple();
+//      if (emoji.catch(rain[i])) {
+//        rain.splice(i, 1);
+//
+//      }
     }
+            prevMillis = millis();
   }
-
-  this.check = function(){
-    if(mouseX > this.x && mouseX < (this.x + this.boxSize) && mouseY > this.y && mouseY < (this.y + this.boxSize)){
-      this.overlay = true;
-      return true;
-    }else{
-      this.overlay = false;
-      return false;
-    }
-  }
-
 }
+
+
+
+function Rain(x, y) {
+  this.x = x;
+  this.y = y;
+  this.gravity = 1;
+  this.len = 35;
+  this.r = 0;
+  this.opacity = 200;
+
+  this.drawRain = function() {
+    noStroke();
+    fill(255);
+    ellipse(this.x, this.y, 1, this.len);
+    this.y = this.y + 8;
+    if (this.y > 400) {
+      this.len = this.len - 5;
+    }
+    if (this.len < 0) {
+      this.len = 0;
+    }
+  };
+
+  this.ripple = function() {
+    strokeWeight(2);
+    colorMode(RGB);
+    stroke(247, 247, 247, this.opacity);
+    noFill();
+    if (this.y > 400) {
+      ellipse(this.x, 400, this.r * 2, this.r / 2);
+      this.r++;
+      this.opacity = this.opacity - 2;
+    }
+  };
+}
+
+//function Emoji(x, y) {
+//  this.x = x;
+//  this.y = y;
+//  this.draw = function() {
+//    //fill(255);
+//    //ellipse(this.x, this.y, 50, 50);
+//    image(face, this.x, this.y, 60, 60);
+//  };
+  this.catch = function(rain) {
+    if (rain.y > this.y - 50) {
+      if (rain.x < this.x + 50 && rain.x > this.x - 50) {
+//        return true;
+//      } else {
+//        return false;
+//      }
+//    }
+//  };
+//
+//}
