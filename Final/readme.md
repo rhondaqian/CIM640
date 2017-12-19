@@ -13,14 +13,14 @@
 ## CIM640 Final Project-- A Rain Game
 ### 1st Code Plan (the user interaction)
 ### First Program Draft
-[link to First Program Draft](https://rhondaqian.github.io/CIM640/Final/Rain game_V1/)
+[link to First Program Draft](https://rhondaqian.github.io/CIM640/Final/Raingame_V1/)
 
 
 ### Final Code Plan
 
 
 ### Second Program Draft
-[link to Second Program Draft](https://rhondaqian.github.io/CIM640/Final/Rain game_V2/)
+[link to Second Program Draft](https://rhondaqian.github.io/CIM640/Final/Raingame_V2/)
 
 ### Final Version 
-[link to Final Projects](https://rhondaqian.github.io/CIM640/Final/Rain game_VFinal/)
+[link to Final Projects](https://rhondaqian.github.io/CIM640/Final/Raingame_VFinal/)
