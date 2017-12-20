@@ -139,7 +139,6 @@ function draw() {
 function Rain(x, y) {
     this.x = x;
     this.y = y;
-    this.gravity = 1;
     this.len = 35;
     this.r = 0;
     this.opacity = 200;
