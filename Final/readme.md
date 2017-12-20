@@ -13,7 +13,7 @@
 ## CIM640 Final Project-- A Rain Game
 ### 1st Code Plan (the user interaction)
 
- My goal is to create a rain scene with a character wandering the canvas. The user can use two button to start and stop the rain. When it’s raining, the character gets upset. Then the user can choose to send it an umbrella to cheer it up. The umbrella will keep the rains off the character.
+ My goal is to create a rain scene with a character wandering the canvas. The user can use two buttons to start and stop the rain. When it’s raining, the character gets upset. Then the user can choose to send it an umbrella to cheer it up. The umbrella will keep the rain off the character.
  Random small rectangles within a for-loop going down the canvas are drew to emulate raindrops. The length and transparency of drops decrease gradually as they reach the bottom of the canvas. Each drop generates a ripple, which is an ellipse that has an increasing radius, a decreasing transparency and the same X value with the rectangle.
  The character is an image with a certain y value and a mouseX. The umbrella is another image, drops will be deleted from the array using splice() if they reach this image. The draw-rain function and the umbrella function are set as different movements. Users can use mousePressed to set the true or false of these movements.
 
@@ -30,4 +30,4 @@ In the sunny scene, text on the board in the background guides users to find cer
 [link to Second Program Draft](https://rhondaqian.github.io/CIM640/Final/Raingame_V2/empty-example)
 
 ### Final Version 
-[link to Final Projects](https://rhondaqian.github.io/CIM640/Final/Raingame_VFinal/empty-example)
+[link to Final Project](https://rhondaqian.github.io/CIM640/Final/Raingame_VFinal/empty-example)
