@@ -2,7 +2,7 @@
 
 
 ### Practice
-[link to practice1](https://github.com/rhondaqian/CIM640/version2site/index.html)
+[link to practice1](https://rhondaqian.github.io/CIM640/version2site/index.html)
 
 
 
