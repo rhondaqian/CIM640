@@ -1,13 +1,17 @@
 .bg {
   position: absolute;
-  z-index: -1;
+/*  z-index: -1;*/
   width: 100%;
   height: 200%;
   background: url("http://zhuangq897.com/wp-content/uploads/2018/11/background.png") 0% 0% repeat;
+/*
   -webkit-animation: bg 200s infinite ease-out alternate;
           animation: bg 200s infinite ease-out alternate;
+*/
+/*
   -webkit-transform-origin: top center;
           transform-origin: top center;
+*/
 }
 @-webkit-keyframes bg {
   100% {
@@ -134,7 +138,7 @@ h6{
 h1{
 	font-family: 'Carter One', cursive;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 40px;
 	color: #3e3e3e;
 	padding-bottom: 10px;
     padding-right: 40px;
